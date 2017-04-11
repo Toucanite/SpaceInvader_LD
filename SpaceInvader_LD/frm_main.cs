@@ -43,11 +43,17 @@ namespace SpaceInvader_LD
                 case Keys.D:
                     partie.Joueur.BougeDroite = true;
                     break;
+
             }
+            
         }
 
         private void frm_Main_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Space)
+            {
+                partie.Joueur.Tire();
+            }
             switch (e.KeyCode)
             {
                 case Keys.A:

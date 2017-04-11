@@ -12,16 +12,17 @@ namespace SpaceInvader_LD
 {
     class Joueur
     {
-        Rectangle spriteJoueur, zoneJeu;
+        Jeu partie;
+        Rectangle spriteJoueur;
         Point position;
         bool bougeGauche, bougeDroite;
         int mouvement = 10;
 
-        public Joueur(Rectangle zoneJeu)
+        public Joueur(Jeu partie)
         {
-            this.zoneJeu = zoneJeu;
+            this.partie = partie;
             Size tailleJoueur = new Size(70, 20);
-            position = new Point(zoneJeu.Left, zoneJeu.Bottom-tailleJoueur.Height);
+            position = new Point(partie.ZoneJeu.Left, partie.ZoneJeu.Bottom - tailleJoueur.Height);
             spriteJoueur = new Rectangle(position, tailleJoueur);
         }
 
@@ -46,13 +47,18 @@ namespace SpaceInvader_LD
             set { bougeGauche = value; }
         }
 
+        public void Tire()
+        {
+            partie.TirJoueur.Add(new Tir(new PointF((float)(spriteJoueur.X + (spriteJoueur.Width) / 2 - 5), (float)(spriteJoueur.Y - 10)), partie.ZoneJeu));
+        }
+
         public void Paint(object sender, PaintEventArgs e)
         {
-            if (bougeGauche && ((Position.X - mouvement) >= zoneJeu.X))
+            if (bougeGauche && ((Position.X - mouvement) >= partie.ZoneJeu.X))
             {
                 Position = new Point(Position.X - mouvement, Position.Y);
             }
-            if (bougeDroite && ((Position.X + mouvement) < zoneJeu.Width-mouvement))
+            if (bougeDroite && ((Position.X + mouvement) < partie.ZoneJeu.Width - mouvement))
             {
                 Position = new Point(Position.X + mouvement, Position.Y);
             }

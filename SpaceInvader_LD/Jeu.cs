@@ -15,12 +15,13 @@ namespace SpaceInvader_LD
         const int MARGE = 50;
         Rectangle zoneJeu;
         Joueur joueur;
+        List<Tir> tirJoueur = new List<Tir>();
         Ennemi e1 = new Ennemi();
 
         public Jeu(Size tailleForm)
         {
             zoneJeu = new Rectangle(new Point(MARGE,MARGE), new Size(tailleForm.Width-2*MARGE, tailleForm.Height-2*MARGE));
-            joueur = new Joueur(zoneJeu);
+            joueur = new Joueur(this);
         }
 
         public Rectangle ZoneJeu
@@ -35,10 +36,22 @@ namespace SpaceInvader_LD
             set { joueur = value; }
         }
 
+        internal List<Tir> TirJoueur
+        {
+            get { return tirJoueur; }
+            set { tirJoueur = value; }
+        }
+
         public void Paint(object sender, PaintEventArgs e)
         {
+            TirJoueur.RemoveAll(Tir => Tir.Stopped);
+
             e.Graphics.DrawRectangle(Pens.Black, zoneJeu);
             joueur.Paint(sender,e);
+            foreach (Tir tir in TirJoueur)
+            {
+                tir.Paint(sender, e);
+            }
         }
     }
 }

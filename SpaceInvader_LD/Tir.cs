@@ -14,28 +14,22 @@ namespace SpaceInvader_LD
 
         Stopwatch sw;
 
-        Size size;
+        Size size = new Size(10,10);
 
 
         double d;
         double td;
         float verticalSpeed;
         float horizontalSpeed;
+        float speed = 130;
 
-        /// <summary>
-        /// Rain drop is an animated graphical object that starts from screen top (y = 0) 
-        /// and move down at speed (pixels / seconds).
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="speed"></param>
-        public Tir(PointF start, PointF end, Size size, float speed)
+        public Tir(PointF start, Rectangle zoneJeu)
         {
             this.start = start;
-            this.end = end;
+            this.end = new PointF(start.X, zoneJeu.Top);
             initialLocation = start;
             location = start;
             verticalSpeed = speed;
-            this.size = size;
             sw = new Stopwatch();
             sw.Start();
 
