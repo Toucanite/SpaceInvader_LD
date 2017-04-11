@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.tmrInvalidate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // tmrInvalidate
+            // 
+            this.tmrInvalidate.Enabled = true;
+            this.tmrInvalidate.Interval = 24;
+            this.tmrInvalidate.Tick += new System.EventHandler(this.tmrInvalidate_Tick);
             // 
             // frm_Main
             // 
@@ -42,11 +50,15 @@
             this.Text = "SpaceInvader";
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frm_Main_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyUp);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer tmrInvalidate;
     }
 }
 

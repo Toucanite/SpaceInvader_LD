@@ -7,3 +7,12 @@ C:\Users\DONATIL_INFO\Documents\Visual Studio 2013\Projects\SpaceInvader_LD\Spac
 C:\Users\DONATIL_INFO\Documents\Visual Studio 2013\Projects\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.exe
 C:\Users\DONATIL_INFO\Documents\Visual Studio 2013\Projects\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.pdb
 C:\Users\DONATIL_INFO\Documents\Visual Studio 2013\Projects\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.frm_Main.resources
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\bin\Debug\SpaceInvader_LD.exe.config
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.exe
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.pdb
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\bin\Debug\SpaceInvader_LD.exe
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\bin\Debug\SpaceInvader_LD.pdb
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.csprojResolveAssemblyReference.cache
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.frm_Main.resources
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.Properties.Resources.resources
+C:\Users\DONATIL_INFO\Documents\GitHub\SpaceInvader_LD\SpaceInvader_LD\obj\Debug\SpaceInvader_LD.csproj.GenerateResource.Cache

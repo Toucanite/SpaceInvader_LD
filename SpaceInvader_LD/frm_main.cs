@@ -16,6 +16,7 @@ namespace SpaceInvader_LD
 
         public frm_Main()
         {
+            DoubleBuffered = true;
             InitializeComponent();
         }
 
@@ -31,7 +32,36 @@ namespace SpaceInvader_LD
         {
             partie.Paint(sender,e);
         }
-        
 
+        private void frm_Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.A:
+                    partie.Joueur.BougeGauche = true;
+                    break;
+                case Keys.D:
+                    partie.Joueur.BougeDroite = true;
+                    break;
+            }
+        }
+
+        private void frm_Main_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.A:
+                    partie.Joueur.BougeGauche = false;
+                    break;
+                case Keys.D:
+                    partie.Joueur.BougeDroite = false;
+                    break;
+            }
+        }
+
+        private void tmrInvalidate_Tick(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
     }
 }

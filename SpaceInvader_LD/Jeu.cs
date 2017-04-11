@@ -29,6 +29,12 @@ namespace SpaceInvader_LD
             set { zoneJeu = value; }
         }
 
+        internal Joueur Joueur
+        {
+            get { return joueur; }
+            set { joueur = value; }
+        }
+
         public void Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawRectangle(Pens.Black, zoneJeu);
