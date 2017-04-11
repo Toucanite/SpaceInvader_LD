@@ -56,14 +56,14 @@ namespace SpaceInvader_LD
 
         public void Paint(object sender, PaintEventArgs e)
         {
-            if (!Stopped)
-                location = new PointF(  initialLocation.X + horizontalSpeed * (float)(sw.ElapsedMilliseconds / 1000.0f),
-                                        initialLocation.Y + verticalSpeed * (float)(sw.ElapsedMilliseconds / 1000.0f));
+            
+            location = new PointF(  initialLocation.X + horizontalSpeed * (float)(sw.ElapsedMilliseconds / 1000.0f),
+                                    initialLocation.Y + verticalSpeed * (float)(sw.ElapsedMilliseconds / 1000.0f));
 
             Rectangle recDessin = new Rectangle(Point.Round(location), size);
 
-            e.Graphics.FillRectangle(Brushes.DimGray, recDessin);
-            e.Graphics.DrawRectangle(Pens.DimGray, recDessin);
+            e.Graphics.FillEllipse(Brushes.DimGray, recDessin);
+            e.Graphics.DrawEllipse(Pens.DimGray, recDessin);
         }
     }
 }
